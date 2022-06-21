@@ -1,5 +1,11 @@
 import streamlit as st
 
+if "down" not in s.session_state:
+    s.session_state.down= False
+if s.session_state.down == False:
+    nltk.download('vader_lexicon')
+    s.session_state.down == True
+
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 vader = SentimentIntensityAnalyzer()
 import numpy as np
