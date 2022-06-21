@@ -30,14 +30,6 @@ for c in range(len(df['headline'])):
     scores.append(score_mean)
 df['score']=scores
 df['positive'] = df['score']>0
-#print(df)
-import matplotlib.pyplot as plt
-from matplotlib.pyplot import figure
-#plt.style.use("classic")
-#plt.xticks(fontsize=25)
-#plt.yticks(fontsize=15)
-#plt.title('Key Word Sentiment Analysis')
-#df['score'].plot(kind='bar',figsize = (20, 10),color=df.positive.map({True: 'g', False: 'r'}))
 import altair as alt
 new=df[['score']]
 new['y']=new.index
