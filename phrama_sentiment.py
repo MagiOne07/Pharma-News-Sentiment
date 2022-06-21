@@ -43,6 +43,6 @@ new['pos']=df['positive']
 chart=alt.Chart(new).mark_bar().encode(x='score',y='y',color=alt.condition(alt.datum.pos == True, alt.value('green'), alt.value('red')))
 st.header('Pharma News Sentiment')
 st.altair_chart(chart, use_container_width=True)
-key=st.selectbox('Select Option', (key_words))
+key=st.selectbox('Check News for:', (key_words))
 st.write(df.loc[key,'headline'])
 del(i,c,k,word,)
